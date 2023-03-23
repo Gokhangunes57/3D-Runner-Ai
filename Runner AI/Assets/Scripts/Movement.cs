@@ -11,8 +11,11 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (Input.GetMouseButton(0))
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime);
+        }
     }
 }
